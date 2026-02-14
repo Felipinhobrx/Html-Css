@@ -199,8 +199,55 @@ article h2 {
   color: var(--destaque);
 }
 
+.projetos-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--fundo-principal);
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  padding: 10px;
+}
+
+.projeto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projetos:hover {
+  border-left: 10px solid var(--destaque);
+  transition: 0.5s;
+}
+
+.projeto-img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.projetos summary {
+  color: var(--destaque);
+  font-weight: bolder;
+}
+
+/*MEDIA QUERY*/
 @media screen and (min-width: 768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #formacao-container {
+    flex-direction: row;
+  }
+
+  .projetos {
+    flex-direction: row-reverse;
   }
 }
